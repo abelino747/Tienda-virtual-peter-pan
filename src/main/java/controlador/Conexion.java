@@ -8,22 +8,24 @@ import javax.swing.JOptionPane;
 
 public class Conexion {
 	
-	Connection conx;
+	Connection con;
 	
 	public Connection Conexionbd() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			try {
-				conx=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "toor");
-				JOptionPane.showMessageDialog(null, "...Conexion Realizada...");
+				con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "toor");
+				//JOptionPane.showMessageDialog(null, "...Conexion Realizada...");
+				System.out.println( "...Conexion Realizada...");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				System.out.println("... Conexiion fallida...");
 			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		return conx;}
+		return con;}
 	
 }

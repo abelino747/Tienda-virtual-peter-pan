@@ -23,7 +23,7 @@
                 <h1> Bienvenidos al Rincón de los Sabores </h1>
                 <img src="imagenes/login.jpg" alt="imagen Usuario" class="img" id="img">
                 <h3>Inicio de Sesión </h3>
-                <form action="ServerLogin" method="post">
+                <form action="ServletLogin" method="post">
                     <input type="text" name="usuario" placeholder="Usuario">
                     <input type="password" name="password" placeholder="Contraseña">
                     <input class="chek" type="checkbox" id="chek">
