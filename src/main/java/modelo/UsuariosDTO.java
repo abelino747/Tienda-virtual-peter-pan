@@ -1,9 +1,7 @@
 package modelo;
 
 public class UsuariosDTO {
-	
-	
-	
+	// data transfer object
 	 private long cedula_usuario;
 	 private String nombre_usuario;
 	 private String email_usuario;

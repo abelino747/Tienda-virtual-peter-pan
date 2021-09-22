@@ -5,12 +5,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Registro Usuario</title>
 </head>
 <body>
-	<%//Conexion con= new Conexion();
-	//con.Conexionbd(); 
-	%>
+
 
 	<form action="ServletUsuario" method="post">
 	<input type="text" name="ced" placeholder="Cedula">

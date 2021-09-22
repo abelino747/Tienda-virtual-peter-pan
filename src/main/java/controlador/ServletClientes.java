@@ -6,6 +6,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
+
+import modelo.ClientesDAO;
+import modelo.ClientesDTO;
+
 
 /**
  * Servlet implementation class ServletClientes
@@ -34,8 +39,44 @@ public class ServletClientes extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		boolean certifica1;
+		
+		 long cedula_cliente;
+		 String nombre_cliente;
+		 String direccion_cliente;
+		 String email_cliente;
+		 String telefono_cliente;
+		 
+		 ClientesDTO cliendto;
+		 ClientesDAO cliendao;
+
+		if (request.getParameter("btncli") !=null) {
+			
+			
+			cedula_cliente = Long.parseLong(request.getParameter("ced"));
+			nombre_cliente = request.getParameter("nom");
+			direccion_cliente = request.getParameter("dir");
+			email_cliente = request.getParameter("ema");
+			telefono_cliente = request.getParameter("tel");
+			
+			//System.out.println(cedula_usuario + " "+ nombre_usuario + " " + email_usuario + " "+ usuario + " "+ password );
+			cliendto = new ClientesDTO(cedula_cliente, nombre_cliente, direccion_cliente, email_cliente, telefono_cliente);
+			cliendao = new ClientesDAO();
+			
+			certifica1 = cliendao.insertar(cliendto);
+			
+			if(certifica1) {
+				
+				JOptionPane.showMessageDialog(null,"El Cliente ha sido registrado");
+				response.sendRedirect("clientes.jsp");
+			}else {
+				JOptionPane.showMessageDialog(null,"Registrar Clientes");
+				response.sendRedirect("clientes.jsp");
+			}
+		}
+		
+		
 	}
 
 }

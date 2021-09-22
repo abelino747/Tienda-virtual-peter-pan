@@ -8,9 +8,10 @@ public class UsuariosDAO {
 	Conexion conx= new Conexion();
 	Connection cnn= conx.Conexionbd();
 	PreparedStatement ps;
-	// usu es un metodo que me permite traer los datos del DTO
+	
 	
 	public boolean insertar(UsuariosDTO usu){
+		// usu es un metodo que me permite traer los datos del DTO
 		int registro;
 		boolean dato=false;
 		System.out.println(usu.getCedula_usuario());
