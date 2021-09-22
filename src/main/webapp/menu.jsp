@@ -16,7 +16,8 @@
             <nav class="menu">
                 <ul>
                     <li><a href="menu.jsp" >Inicio</a></li>
-                    <li><a href="usuarios.jsp" >Usuarios</a></li>
+                    <li><a href="Usuarios.jsp" >usuarios</a></li>
+                    
                     <li><a href="clientes.jsp" >Clientes</a></li>
                     <li><a href="proveedores.jsp" >Proveedores</a></li>
                     <li><a href="productos.jsp" >Productos</a></li>
