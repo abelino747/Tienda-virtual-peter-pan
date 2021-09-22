@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-	<title>Panaderia Peter Pan</title>
+	<title>Panaderia Peter Paan</title>
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="shortcut icon" href="Favicon Peter Pan.ico">
 </head>
@@ -15,7 +15,7 @@
 
     <main>
         <nav class="contenedor">
-            <header><h2>Panadería Peter Pan</h2></header>    
+            <header><h2>Panadería Peter Paan</h2></header>    
         </nav>    
     </main>
         <nav class="formulario" >
