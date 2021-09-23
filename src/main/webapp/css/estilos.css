@@ -1,3 +1,8 @@
 @charset "ISO-8859-1";
 
+html {
+  font-size: 12px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
+  font-family: "Fleur De Leah", cursive;
+}
+
 

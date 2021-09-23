@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="ISO-8859-1">
 	    <meta charset="UTF-8">
@@ -11,6 +12,7 @@
 		<link rel="stylesheet" href="css/estilos.css">
 		<link rel="shortcut icon" href="Favicon Peter Pan.ico">
 	</head>
+
 <body>
 
     <main>

@@ -17,6 +17,7 @@
 	<input  type="text"   name="us"  required placeholder="Usuario"  oninvalid="this.setCustomValidity('Usuario Requerido   ')">
 	<input  type="text"   name="pas" required placeholder="Password" oninvalid="this.setCustomValidity('Contraseña Requerida')">
 	<button type="submit" name="btnus">Registrar</button>
+
 	
 	</form>
 
