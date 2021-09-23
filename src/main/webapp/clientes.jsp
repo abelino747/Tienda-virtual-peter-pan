@@ -15,10 +15,6 @@
 		<input type="text" name="ema" placeholder="E-mail">
 		<input type="text" name="tel" placeholder="Teléfono">
 		<button type="submit" name="btncli">enviar</button>
-	
-	
-	
-	
 	</form>
 
 </body>

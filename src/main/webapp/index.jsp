@@ -9,7 +9,10 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
 	<title>Panaderia Peter Paan</title>
 	<link rel="stylesheet" href="css/estilos.css">
-	<link rel="shortcut icon" href="Favicon Peter Pan.ico">
+	<link rel="shortcut icon" href="favicon.ico?" type="image/x-icon" />
+	<link rel = "preconnect" href = "https://fonts.googleapis.com">
+	<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+	<link href = "https: //fonts.googleapis.com/css2?" rel ="stylesheet">
 </head>
 <body>
 
