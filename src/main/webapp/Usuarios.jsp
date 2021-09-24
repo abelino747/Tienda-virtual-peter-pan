@@ -9,14 +9,27 @@
 </head>
 <body>
 
-	<form action="ServletUsuario" method="post">
+		
+	<%	
+	// las variables que viajan por el servlet se colocan en nuevas variables que se muestran
+	// en el input o donde se quieran mostrar como una tabla aparte con value
+		String cedula= request.getParameter("ced");
+		String nombre=request.getParameter("nom");
+		String email=request.getParameter("e");
+		String usuario=request.getParameter("us");
+		String contra=request.getParameter("pas");		
 	
-	<input  type="number" name="ced" required placeholder="Cedula"   oninvalid="this.setCustomValidity('Cedula Requerido    ')">
-	<input  type="text"   name="nom" required placeholder="Nombre"   oninvalid="this.setCustomValidity('Nombre Requerido    ')">
-	<input  type="email"  name="e"   required placeholder="E-mail"   oninvalid="this.setCustomValidity('E-mail Requerido    ')">
-	<input  type="text"   name="us"  required placeholder="Usuario"  oninvalid="this.setCustomValidity('Usuario Requerido   ')">
-	<input  type="text"   name="pas" required placeholder="Password" oninvalid="this.setCustomValidity('Contraseña Requerida')">
-	<button type="submit" name="btnus">Registrar</button>
+	%>
+
+		<form action="ServletUsuario" method="POST">
+		<input type="text" name="ced" value="<%=cedula%>" placeholder="Cedula">
+		<input type="text" name="nom" value="<%=nombre%>" placeholder="Nombre">
+		<input type="text" name="e"   value="<%=email%>"  placeholder="E-mail">
+		<input type="text" name="us"  value="<%=usuario%>"placeholder="Usuario">
+		<input type="text" name="pas" value="<%=contra%>" placeholder="Password">
+
+		<button type="submit" name="btnus">Registrar</button>
+		<button type="submit" name="btncon">Consultar</button>
 
 	
 	</form>

@@ -39,8 +39,8 @@ public class ServletUsuario extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		// Registro de Usuarios
 		boolean certifica;
-		
 		 long cedula_usuario;
 		 String nombre_usuario;
 		 String email_usuario;
@@ -49,6 +49,8 @@ public class ServletUsuario extends HttpServlet {
 		
 		 UsuariosDTO usudto;
 		 UsuariosDAO usudao;
+		 UsuariosDTO consultausu;
+		 
 		if (request.getParameter("btnus") !=null) {
 			
 			cedula_usuario = Long.parseLong(request.getParameter("ced"));
@@ -71,6 +73,26 @@ public class ServletUsuario extends HttpServlet {
 			}
 		}	
 		
-	}
-
-}
+		// Consulta de Usuarios
+					
+		if (request.getParameter("btncon")!=null) {
+					
+				cedula_usuario = Long.parseLong(request.getParameter("ced"));
+				
+				usudto = new  UsuariosDTO(cedula_usuario);
+				usudao = new UsuariosDAO();
+				consultausu= usudao.consultar(usudto);
+				
+				cedula_usuario=consultausu.getCedula_usuario();
+				nombre_usuario=consultausu.getNombre_usuario();
+				email_usuario=consultausu.getEmail_usuario();
+				usuario=consultausu.getUsuario();
+				password=consultausu.getPassword();
+				// las varables dentro del response en las "", se crean hay y se usan en el ejercicio.jsp
+				// ya que son las que viajan 
+				response.sendRedirect("Usuarios.jsp?ced="+cedula_usuario+"&&nom="+nombre_usuario+
+									  "&&e="+email_usuario+"&&us="+usuario+"&&pas="+password);
+					
+			}
+			
+	}}

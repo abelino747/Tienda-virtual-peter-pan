@@ -17,6 +17,17 @@ public class UsuariosDTO {
 		this.usuario = usuario;
 		this.password = password;
 	}
+	
+	// constructor para generar consulta por la cedula
+	public UsuariosDTO(long cedula_usuario) {
+		super();
+		this.cedula_usuario = cedula_usuario;
+	}
+
+
+
+
+
 	public long getCedula_usuario() {
 		return cedula_usuario;
 	}
