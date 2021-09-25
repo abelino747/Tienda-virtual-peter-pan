@@ -124,6 +124,25 @@ public class ServletClientes extends HttpServlet {
 			}
 			
 		}
+		
+		if(request.getParameter("btnEli") != null) {
+			int dat;
+			cedula_cliente = Long.parseLong(request.getParameter("ced"));
+			
+			cliendto = new ClientesDTO(cedula_cliente);
+			cliendao = new ClientesDAO();
+			certifica1 = cliendao.eliminar(cliendto);
+			
+			if(certifica1) {
+				
+				JOptionPane.showMessageDialog(null,"El Cliente ha sido eliminado");
+				response.sendRedirect("clientes.jsp");
+			}else {
+				JOptionPane.showMessageDialog(null,"Registrar Clientes");
+				response.sendRedirect("clientes.jsp");
+			}
+			
+		}
 
 	}
 

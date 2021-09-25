@@ -86,5 +86,25 @@ public class ClientesDAO {
 		return clientesdto;
 		
 	}
+	
+	public boolean eliminar(ClientesDTO clien) {
+		// clien es un metodo que me permite traer los datos del DTO
+		int registro;
+		boolean dato = false;
+
+		try {
+			ps= cnn.prepareStatement("DELETE FROM clientes WHERE cedula_cliente=?");			
+			ps.setLong(1, clien.getCedula_cliente());
+			registro = ps.executeUpdate();				
+			
+			if (registro > 0) {
+				dato = true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return dato;
+	}
 
 }
