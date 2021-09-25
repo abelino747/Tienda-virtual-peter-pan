@@ -6,15 +6,20 @@ public class ProveedoresDTO {
 	private String ciudad_proveedor;
 	private String direccion_proveedor;
 	private String telefono_proveedor;
-	
+
 	public ProveedoresDTO(long nit_proveedor, String nombre_proveedor, String ciudad_proveedor,
 			String direccion_proveedor, String telefono_proveedor) {
-		
+
 		this.nit_proveedor = nit_proveedor;
 		this.nombre_proveedor = nombre_proveedor;
 		this.ciudad_proveedor = ciudad_proveedor;
 		this.direccion_proveedor = direccion_proveedor;
 		this.telefono_proveedor = telefono_proveedor;
+	}
+
+// constructor para generar consulta por el nit
+	public ProveedoresDTO(long nit_proveedor) {
+		this.nit_proveedor = nit_proveedor;
 	}
 
 	public long getNit_proveedor() {
@@ -56,7 +61,5 @@ public class ProveedoresDTO {
 	public void setTelefono_proveedor(String telefono_proveedor) {
 		this.telefono_proveedor = telefono_proveedor;
 	}
-	
-	
 
 }

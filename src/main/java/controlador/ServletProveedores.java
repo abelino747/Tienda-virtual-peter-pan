@@ -17,64 +17,91 @@ import modelo.ProveedoresDTO;
 @WebServlet("/ServletProveedores")
 public class ServletProveedores extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ServletProveedores() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ServletProveedores() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 boolean certifica1;
-		 
-		 long nit_proveedor;
-		 String nombre_proveedor;
-		 String ciudad_proveedor;
-		 String direccion_proveedor;
-		 String telefono_proveedor;
-		 
-		 ProveedoresDTO proveedordto;
-		 ProveedoresDAO proveedordao;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		boolean certifica1;
 
-		if (request.getParameter("btnProveedor") !=null) {			
-			
+		long nit_proveedor;
+		String nombre_proveedor;
+		String ciudad_proveedor;
+		String direccion_proveedor;
+		String telefono_proveedor;
+
+		ProveedoresDTO proveedordto;
+		ProveedoresDAO proveedordao;
+		ProveedoresDTO consultaprov;
+
+		if (request.getParameter("btnProveedor") != null) {
+
 			nit_proveedor = Long.parseLong(request.getParameter("nit"));
 			nombre_proveedor = request.getParameter("nombre");
 			ciudad_proveedor = request.getParameter("ciudad");
 			direccion_proveedor = request.getParameter("direccion");
 			telefono_proveedor = request.getParameter("telefono");
-			
-			proveedordto = new ProveedoresDTO(nit_proveedor, nombre_proveedor, ciudad_proveedor, direccion_proveedor, telefono_proveedor);
+
+			proveedordto = new ProveedoresDTO(nit_proveedor, nombre_proveedor, ciudad_proveedor, direccion_proveedor,
+					telefono_proveedor);
 			proveedordao = new ProveedoresDAO();
-			
+
 			certifica1 = proveedordao.insertar(proveedordto);
-			
-			if(certifica1) {
-				
-				JOptionPane.showMessageDialog(null,"El proveedor ha sido registrado");
+
+			if (certifica1) {
+
+				JOptionPane.showMessageDialog(null, "El proveedor ha sido registrado");
 				response.sendRedirect("proveedores.jsp");
-			}else {
-				JOptionPane.showMessageDialog(null,"Registrar Proveedores");
+			} else {
+				JOptionPane.showMessageDialog(null, "Registrar Proveedores");
 				response.sendRedirect("proveedores.jsp");
 			}
-			
+		}
+
+		// Consulta de Proveedores
+
+		if (request.getParameter("btnprove") != null) {
+		
+
+			nit_proveedor = Long.parseLong(request.getParameter("nit1"));
+
+			proveedordto = new ProveedoresDTO(nit_proveedor);
+			proveedordao = new ProveedoresDAO();
+			consultaprov = proveedordao.consultar(proveedordto);
+
+			//nit_proveedor = consultaprov.getNit_proveedor();
+			nombre_proveedor = consultaprov.getNombre_proveedor();
+			ciudad_proveedor = consultaprov.getCiudad_proveedor();
+			direccion_proveedor = consultaprov.getDireccion_proveedor();
+			telefono_proveedor = consultaprov.getTelefono_proveedor();
+			// las variables dentro del response en las "", se crean hay y se usan en el
+			// ejercicio.jsp
+			// ya que son las que viajan
+			response.sendRedirect("proveedores.jsp?nit1=" + nit_proveedor + "&&nombre1=" + nombre_proveedor
+					+ "&&ciudad1=" + ciudad_proveedor + "&&direccion1=" + direccion_proveedor + "&&telefono1="
+					+ telefono_proveedor);
 
 		}
-		
-		
 
 	}
 
