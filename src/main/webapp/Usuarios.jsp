@@ -29,6 +29,7 @@
 
 		<button type="submit" name="btnus">Registrar</button>
 		<button type="submit" name="btncon">Consultar</button>
+		<button type="submit" name="btnact">Actualizar</button>
 
 		</form>
 

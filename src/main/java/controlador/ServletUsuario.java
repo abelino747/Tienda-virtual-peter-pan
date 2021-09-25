@@ -94,5 +94,30 @@ public class ServletUsuario extends HttpServlet {
 									  "&&e="+email_usuario+"&&us="+usuario+"&&pas="+password);
 					
 			}
+		
+		// actualizacion de usuario
+		
+		if(request.getParameter("btnact") != null) {
+			int dat;
+			 cedula_usuario=Long.parseLong(request.getParameter("ced"));
+			 nombre_usuario=request.getParameter("nom");
+			 email_usuario=request.getParameter("e");
+			 usuario=request.getParameter("us");
+			 password=request.getParameter("pas");
+			
+			 usudto = new UsuariosDTO(cedula_usuario,nombre_usuario,email_usuario,usuario,password);
+			 usudao = new UsuariosDAO();
+			 dat=usudao.actualizar(usudto);
+			
+			if (dat>0) {
+				JOptionPane.showMessageDialog(null, "Usuario Actualizado...");
+				
+			} else {
+				JOptionPane.showMessageDialog(null, "Usuario NO Actualizado...");
+				
+			}
+			response.sendRedirect("Usuarios.jsp");
+		}
+		
 			
 	}}
