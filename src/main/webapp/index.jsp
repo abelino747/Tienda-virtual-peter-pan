@@ -19,7 +19,7 @@
         <nav class="contenedor">
             <header><h1>Panadería Peter Pan</h1></header>    
         </nav>    
-    </main>
+    
     
     <nav class="formulario" >
         <div class="form">
@@ -39,5 +39,7 @@
             
         </div>
     </nav>
+    
+    </main>
 </body>
 </html>

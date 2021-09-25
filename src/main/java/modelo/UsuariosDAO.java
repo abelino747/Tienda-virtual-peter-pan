@@ -15,8 +15,8 @@ public class UsuariosDAO {
 		// usu es un metodo que me permite traer los datos del DTO
 		int registro;
 		boolean dato=false;
-		System.out.println(usu.getCedula_usuario());
-		System.out.println(usu.getNombre_usuario());
+		//System.out.println(usu.getCedula_usuario());
+		//System.out.println(usu.getNombre_usuario());
 		try {
 			ps= cnn.prepareStatement("INSERT INTO Usuarios Values(?,?,?,?,?)");
 			ps.setLong(1, usu.getCedula_usuario());

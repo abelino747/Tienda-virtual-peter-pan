@@ -7,9 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Registro Usuario</title>
 </head>
-<body>
-
-		
+<body>	
 	<%	
 	// las variables que viajan por el servlet se colocan en nuevas variables que se muestran
 	// en el input o donde se quieran mostrar como una tabla aparte con value
@@ -22,6 +20,7 @@
 	%>
 
 		<form action="ServletUsuario" method="POST">
+		
 		<input type="text" name="ced" value="<%=cedula%>" placeholder="Cedula">
 		<input type="text" name="nom" value="<%=nombre%>" placeholder="Nombre">
 		<input type="text" name="e"   value="<%=email%>"  placeholder="E-mail">
@@ -31,8 +30,7 @@
 		<button type="submit" name="btnus">Registrar</button>
 		<button type="submit" name="btncon">Consultar</button>
 
-	
-	</form>
+		</form>
 
 
 </body>

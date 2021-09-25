@@ -18,6 +18,12 @@ public class ClientesDTO {
 		this.telefono_cliente = telefono_cliente;
 	}
 
+	 // constructor para consultar los clientes desde la cedula
+	public ClientesDTO(long cedula_cliente) {
+		
+		this.cedula_cliente = cedula_cliente;
+	}
+
 	public long getCedula_cliente() {
 		return cedula_cliente;
 	}

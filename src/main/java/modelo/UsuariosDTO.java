@@ -24,10 +24,6 @@ public class UsuariosDTO {
 		this.cedula_usuario = cedula_usuario;
 	}
 
-
-
-
-
 	public long getCedula_usuario() {
 		return cedula_usuario;
 	}
