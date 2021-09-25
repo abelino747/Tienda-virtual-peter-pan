@@ -28,6 +28,8 @@
 
 		<button type="submit" name="btncli">Registrar</button>
 		<button type="submit" name="btncon">Consultar</button>
+		<button type="submit" name="btnact">Actualizar</button>
+		<button type="submit" name="btnEli">Eliminar</button>
 
 		</form>
 
