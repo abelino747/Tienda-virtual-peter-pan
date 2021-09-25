@@ -27,6 +27,7 @@
 		<button type="submit" name="btnProveedor">Registrar</button>
 		<button type="submit" name="btnprove">Consultar</button>
         <button type="submit" name="btnact">Actualizar</button>
+        <button type="submit" name="btnEli">Eliminar</button>
 	
 	</form>
 </body>

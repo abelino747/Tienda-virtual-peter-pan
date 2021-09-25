@@ -57,11 +57,11 @@ public class ServletProveedores extends HttpServlet {
 
 		if (request.getParameter("btnProveedor") != null) {
 
-			nit_proveedor = Long.parseLong(request.getParameter("nit"));
-			nombre_proveedor = request.getParameter("nombre");
-			ciudad_proveedor = request.getParameter("ciudad");
-			direccion_proveedor = request.getParameter("direccion");
-			telefono_proveedor = request.getParameter("telefono");
+			nit_proveedor = Long.parseLong(request.getParameter("nit1"));
+			nombre_proveedor = request.getParameter("nombre1");
+			ciudad_proveedor = request.getParameter("ciudad1");
+			direccion_proveedor = request.getParameter("direccion1");
+			telefono_proveedor = request.getParameter("telefono1");
 
 			proveedordto = new ProveedoresDTO(nit_proveedor, nombre_proveedor, ciudad_proveedor, direccion_proveedor,
 					telefono_proveedor);
@@ -122,6 +122,26 @@ public class ServletProveedores extends HttpServlet {
 						
 					} else {
 						JOptionPane.showMessageDialog(null, "Proveedor NO Actualizado :( ...");
+						
+					}
+					response.sendRedirect("proveedores.jsp");
+				}
+				//Eliminar proveedores
+				
+				if(request.getParameter("btnEli") != null) {
+					boolean dat;
+					nit_proveedor=Long.parseLong(request.getParameter("nit1"));
+			
+					
+					proveedordto = new ProveedoresDTO(nit_proveedor);
+					proveedordao = new ProveedoresDAO();
+					 dat=proveedordao.eliminar(proveedordto);
+					
+					if (dat==true) {
+						JOptionPane.showMessageDialog(null, "Proveedor Eliminado :) ...");
+						
+					} else {
+						JOptionPane.showMessageDialog(null, "Proveedor NO Eliminado :( ...");
 						
 					}
 					response.sendRedirect("proveedores.jsp");

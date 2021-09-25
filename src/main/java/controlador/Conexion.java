@@ -15,7 +15,7 @@ public class Conexion {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			try {
 				//con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "Drluky0311.");
-				con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "toor");
+			    con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "toor");
 				//JOptionPane.showMessageDialog(null, "...Conexion Realizada...");
 				System.out.println( "...Conexion Realizada...");
 			} catch (SQLException e) {

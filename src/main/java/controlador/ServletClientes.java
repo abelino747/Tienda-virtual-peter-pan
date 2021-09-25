@@ -10,8 +10,6 @@ import javax.swing.JOptionPane;
 
 import modelo.ClientesDAO;
 import modelo.ClientesDTO;
-import modelo.UsuariosDAO;
-import modelo.UsuariosDTO;
 
 
 
@@ -102,7 +100,7 @@ public class ServletClientes extends HttpServlet {
 		}
 		
 		if(request.getParameter("btnact") != null) {
-			int dat;
+			
 			cedula_cliente = Long.parseLong(request.getParameter("ced"));
 			nombre_cliente = request.getParameter("nom");
 			direccion_cliente = request.getParameter("dir");
@@ -124,9 +122,9 @@ public class ServletClientes extends HttpServlet {
 			}
 			
 		}
-		
+		//Eliminar Clientes
 		if(request.getParameter("btnEli") != null) {
-			int dat;
+			
 			cedula_cliente = Long.parseLong(request.getParameter("ced"));
 			
 			cliendto = new ClientesDTO(cedula_cliente);
