@@ -63,4 +63,27 @@ public class ProveedoresDAO {
 		return proveedordto;
 
 	}
+	//actualizar
+	
+			public int actualizar(ProveedoresDTO proveedor) {
+				int x=0;
+				try {
+					
+					ps= cnn.prepareStatement("UPDATE proveedores SET nombre_proveedor=?,ciudad_proveedor=?,direccion_proveedor=?,telefono_proveedor=? WHERE nit_proveedor=?");
+					ps.setString(1, proveedor.getNombre_proveedor());
+					ps.setString(2, proveedor.getCiudad_proveedor());
+					ps.setString(3, proveedor.getDireccion_proveedor());
+					ps.setString(4, proveedor.getTelefono_proveedor());
+					// siempre se coloca al final el dato por el cual se consulta para actualizar
+					ps.setLong(5, proveedor.getNit_proveedor());
+					x=ps.executeUpdate();
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				return x;
+				
+				
+			}
 }

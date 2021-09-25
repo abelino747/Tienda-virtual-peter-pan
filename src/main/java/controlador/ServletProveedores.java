@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import modelo.ProveedoresDAO;
 import modelo.ProveedoresDTO;
 
+
 /**
  * Servlet implementation class ServletProveedores
  */
@@ -102,6 +103,29 @@ public class ServletProveedores extends HttpServlet {
 					+ telefono_proveedor);
 
 		}
+		// actualizacion de proveedores
+		
+				if(request.getParameter("btnact") != null) {
+					int dat;
+					nit_proveedor=Long.parseLong(request.getParameter("nit1"));
+					nombre_proveedor=request.getParameter("nombre1");
+					ciudad_proveedor=request.getParameter("ciudad1");
+					direccion_proveedor=request.getParameter("direccion1");
+					telefono_proveedor=request.getParameter("telefono1");
+					
+					proveedordto = new ProveedoresDTO(nit_proveedor,nombre_proveedor,ciudad_proveedor,direccion_proveedor,telefono_proveedor);
+					proveedordao = new ProveedoresDAO();
+					 dat=proveedordao.actualizar(proveedordto);
+					
+					if (dat>0) {
+						JOptionPane.showMessageDialog(null, "Proveedor Actualizado :) ...");
+						
+					} else {
+						JOptionPane.showMessageDialog(null, "Proveedor NO Actualizado :( ...");
+						
+					}
+					response.sendRedirect("proveedores.jsp");
+				}
 
 	}
 
