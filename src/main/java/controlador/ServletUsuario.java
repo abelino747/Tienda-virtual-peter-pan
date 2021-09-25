@@ -119,5 +119,23 @@ public class ServletUsuario extends HttpServlet {
 			response.sendRedirect("Usuarios.jsp");
 		}
 		
+		// eliminar usuario 
+		
+		if(request.getParameter("btneli") != null) {
+			int dat;
+			cedula_usuario=Long.parseLong(request.getParameter("ced"));
+			usudto = new UsuariosDTO(cedula_usuario);
+			usudao = new UsuariosDAO();
+			dat= usudao.eliminar(usudto);
+			if (dat>0) {
+				JOptionPane.showMessageDialog(null,"El Dato se Elimino");
+				
+			} else {
+				JOptionPane.showMessageDialog(null,"El Dato se Elimino");
+				
+			}
+			response.sendRedirect("Usuarios.jsp");
+		}
+		
 			
 	}}
