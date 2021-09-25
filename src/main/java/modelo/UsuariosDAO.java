@@ -87,5 +87,24 @@ public class UsuariosDAO {
 		}
 		
 		
+		// eliminar usuario
+		
+		public int eliminar (UsuariosDTO usuario) {
+			int x=0;
+			try {
+				ps =cnn.prepareStatement("DELETE FROM usuarios WHERE cedula_usuario=?");
+				ps.setLong(1, usuario.getCedula_usuario());
+				x=ps.executeUpdate();
+				
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return x;
+				
+		}
+		
+		
 	
 }
