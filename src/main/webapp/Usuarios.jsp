@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/EstilosMenu.css">
 
 
-<title>Registro Usuario</title>
+<title>Usuario</title>
 </head>
 <body>	
 	<%	

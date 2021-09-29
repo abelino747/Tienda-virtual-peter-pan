@@ -17,11 +17,8 @@ main{
     text-align: center;
     position: absolute;
     top: 2%;
-    color: white;  
-    
+    color: white; 
      
-
-    
 }
 h1{
     margin-left: 42%;
@@ -55,10 +52,7 @@ h3{
     width: 100%;
     height: 90%;
     max-width: 600px;
-    margin-top: 40px;
-    
-
-    
+    margin-top: 40px;   
 
 }
 .contenedor .opcion{
