@@ -91,17 +91,17 @@
         <div id="formulario" class="formulario" style="display:none;">
             <form id="re" action="ServerLogin" method="POST">
             
-                <p>Cedula</p>
+                <p>Cedula  :</p>
                 <input type="text" name="ced"  required placeholder="Cedula">
                 
                 
-                <p>Nombre</p>
+                <p>Nombre  :</p>
                 <input type="text" name="nom"  required placeholder="Nombre">
-                <p>Correo</p>
+                <p>Correo  :</p>
                 <input type="text" name="e"    required placeholder="E-mail">
-                <p>Usuario</p>
+                <p>Usuario :</p>
                 <input type="text" name="us"   required placeholder="Usuario">
-                <p>Password</p>
+                <p>Password:</p>
                 <input type="text" name="pas"  required placeholder="Password">
                 <button type="submit" name="btnus" class="chek" type="checkbox" id="chek">Registro </button>
             </form>  

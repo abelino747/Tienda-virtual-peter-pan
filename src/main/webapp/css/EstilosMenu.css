@@ -8,11 +8,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 body{
-	background-image: url("../imagenes/tea-time-4825281_1920.png") ;
-	width: 100%;
-    background-size:cover;
-    height:100vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+background-image: url("../imagenes/tea-time-4825281_1920.png") ;
 }
 
 main{
@@ -21,7 +17,11 @@ main{
     text-align: center;
     position: absolute;
     top: 2%;
-    color: white;      
+    color: white;  
+    
+     
+
+    
 }
 h1{
     margin-left: 42%;
@@ -56,6 +56,10 @@ h3{
     height: 90%;
     max-width: 600px;
     margin-top: 40px;
+    
+
+    
+
 }
 .contenedor .opcion{
     display: inline-block;
@@ -68,6 +72,8 @@ h3{
     border-radius: 15px;
     cursor: pointer;
     transition: all 300ms;
+
+
 }
 .opcion:hover{
     box-shadow: 10px 10px 0px 0px #38d498, 20px 20px #48da9dfa, 30px 30px 14px #5bf7bb;
@@ -84,11 +90,11 @@ h3{
 /* formulario de registro usuarios */
 
 .formulario{
-    width: 50%;
-    height: 70%;
+    width: 600px;
+    height: 450px;
     border-radius: 3%;
     box-shadow: 0 0 15px rgb(9, 30, 150);
-    background-color: rgba(194, 3, 219, 0.582);
+    background-color: rgba(5, 128, 128, 0.671);
     color: #fff;
     top: 62%;
     left: 50%;
@@ -102,11 +108,13 @@ h3{
     margin: 0;
     padding: 5px;
     font-weight: bold;
+    display: inline-block;
 
 }
 .formulario input{
-    width: 100%;
-    padding: 7px;
+    width: 75%;
+    padding: auto;
+    margin-left: auto;
     margin-bottom: 20px;   
     background: transparent; 
     border: none;
@@ -114,17 +122,18 @@ h3{
     font-size: 1.5em;  
     color: white;
 
+
 }
 .chek{
     border: none;
     outline: none;
     height: 35px;
-    width: 150px;
+    width: 130px;
     background: #031c8f;
     color: #fff;
     font-size: 1.5em;
     border-radius: 15px;
-    margin: 1% 0% ;
+    margin: 10% 0% ;
 
 }
 .chek:hover{
@@ -132,5 +141,7 @@ h3{
     background: #08b3ddde;
     color: #000;
 }
+
+
 
 

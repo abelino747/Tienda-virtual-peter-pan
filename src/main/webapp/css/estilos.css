@@ -1,4 +1,11 @@
 @charset "ISO-8859-1";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
 
 body{
     background-image: url("../imagenes/tea-time-4825281_1920.png");
@@ -9,12 +16,12 @@ body{
 }
 .formulario{
     width: 460px;
-    height: 500px;
+    height: 55%;
     border-radius: 3%;
     box-shadow: 0 0 20px rgb(0, 221, 203);
     background-color:rgba(5, 128, 128, 0.671);
     color: #fff;
-    top: 50%;
+    top: 55%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -54,7 +61,7 @@ h1, h2{
     background: transparent;
     outline: none;
     height: 25px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.664);
     font-size: 16px;
 
 }
@@ -86,4 +93,3 @@ h1, h2{
 {
     color: #39dc79;
 }
-

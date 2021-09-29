@@ -88,15 +88,15 @@
     <nav   class="usuarios" >
         <div id="formulario" class="formulario">
 		<form action="ServletUsuario" method="POST">
-		<p>Cedula</p>
+		<p>Cedula :</p>
 		<input type="text" name="ced" value="<%=cedula%>" required placeholder="Cedula">
-		<p>Nombre</p>
+		<p>Nombre :</p>
 		<input type="text" name="nom" value="<%=nombre%>" required placeholder="Nombre">
-		<p>Correo</p>
+		<p>Correo :</p>
 		<input type="text" name="e"   value="<%=email%>" required placeholder="E-mail">
-		<p>Usuario</p>
+		<p>Usuario :</p>
 		<input type="text" name="us"  value="<%=usuario%>" required placeholder="Usuario">
-		<p>Password</p>
+		<p>Password:</p>
 		<input type="text" name="pas" value="<%=contra%>" placeholder="Password">
 		<button type="submit" name="btnus" class="chek" type="checkbox" id="chek">Registro </button>		
 		<button type="submit" name="btncon" class="chek" type="checkbox" id="chek">Consultar</button>
