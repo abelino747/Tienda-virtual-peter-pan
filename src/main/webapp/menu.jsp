@@ -1,32 +1,118 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Peter Pan</title>
+    <link rel="shortcut icon" href="imagenes/Favicon Peter Pan.ico">
+    <link rel="stylesheet" href="css/EstilosMenu.css">
+
+    <script>
+        var clic = 1;
+        function  divAuto(){ 
+           if(clic==1){
+           document.getElementById("formulario").style.display = "block";
+           clic = clic + 1;
+           } else{
+            document.getElementById("formulario").style.display = "none";      
+            clic = 1;
+           }   
+        }
+        </script>
 </head>
+
 <body>
-<main>
+    <header>
+        <h1>Panaderia Peter Pan</h1>
+        <img class="img" src="imagenes/PeterPan Transparente.png" alt="logo" height="150px">
+        <h3>El Rincón del Sabor</h3>
+    </header>
+  
+  <main>
+        <h3>Menu</h3>
+
         <nav class="contenedor">
-            <header><h2>Panadería Peter Pan</h2></header> 
-            <input type="checkbox" id="check">
-            <label for="check" class="icon-menu" ><img src="imagenes/menu-2925825_1920.png" width="25" height="25" alt=""> Menu </label>
-            
-            <nav class="menu">
-                <ul>
-                    <li><a href="menu.jsp" >Inicio</a></li>
-                    <li><a href="Usuarios.jsp" >usuarios</a></li>
-                    <li><a href="clientes.jsp" >Clientes</a></li>
-                    <li><a href="proveedores.jsp" >Proveedores</a></li>
-                    <li><a href="productos.jsp" >Productos</a></li>
-                    <li><a href="reportes.jsp" >Reportes</a></li>
-                    <li><a href="ventas.jsp" >Ventas</a></li>
-                    <li><a href="index.jsp" >Salir</a></li>
-                </ul>
-            </nav>  
+            <a href="menu.jsp">
+                <div class="opcion">
+                    <img src="imagenes/house-1110868_1280.png" alt="Reportes">
+                    <h2>Inicio</h2>
+                </div>
+            </a>
+            <a href="Usuarios.jsp">
+                <div class="opcion">
+                    <img src="imagenes/usuarios.png" alt="Usuarios">
+                    <h2>Usuarios</h2>
+                </div>
+            </a>
+            <a href="clientes.jsp">
+                <div class="opcion">
+                    <img src="imagenes/clientes.png" alt="Clientes">
+                    <h2>Clientes</h2>
+                </div>
+            </a>
+            <a href="proveedores.jsp">
+                <div class="opcion">
+                    <img src="imagenes/proveedoress.png" alt="Proveedores">
+                    <h2>Proveedores</h2>
+                </div>
+            </a>
+            <a href="productos.jsp">
+                <div class="opcion">
+                    <img src="imagenes/donut-1727493_1920.png" alt="productos">
+                    <h2>Productos</h2>
+                </div>
+            </a>
+            <a href="reportes.jsp">
+                <div class="opcion">
+                    <img src="imagenes/symbol-2444430_1280.png" alt="Reportes">
+                    <h2>Reportes</h2>
+                </div>
+            </a>
+            <a href="ventas.jsp">
+                <div class="opcion">
+                    <img src="imagenes/shopping-cart-1105049_1280.png" alt="Reportes">
+                    <h2>Ventas</h2>
+                </div>
+            </a>
+            <a href="index.jsp">
+                <div class="opcion">
+                    <img src="imagenes/log-out-2355227_1280.png" alt="Reportes">
+                    <h2>Salir</h2>
+                </div>
+            </a>
         </nav>
     </main>
 
+
+    <nav   class="usuarios" >
+        <div id="formulario" class="formulario" style="display:none;">
+            <form id="re" action="ServerLogin" method="POST">
+            
+                <p>Cedula</p>
+                <input type="text" name="ced"  required placeholder="Cedula">
+                
+                
+                <p>Nombre</p>
+                <input type="text" name="nom"  required placeholder="Nombre">
+                <p>Correo</p>
+                <input type="text" name="e"    required placeholder="E-mail">
+                <p>Usuario</p>
+                <input type="text" name="us"   required placeholder="Usuario">
+                <p>Password</p>
+                <input type="text" name="pas"  required placeholder="Password">
+                <button type="submit" name="btnus" class="chek" type="checkbox" id="chek">Registro </button>
+            </form>  
+        </div>
+    </nav>
+  
+  
+  
+  
+  
+  
+  
 </body>
 </html>

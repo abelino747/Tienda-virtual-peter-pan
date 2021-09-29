@@ -1,8 +1,89 @@
 @charset "ISO-8859-1";
 
-html {
-  font-size: 12px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
-  font-family: "Fleur De Leah", cursive;
+body{
+    background-image: url("../imagenes/tea-time-4825281_1920.png");
+    width: 100%;
+    background-size:cover;
+    height:100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.formulario{
+    width: 460px;
+    height: 500px;
+    border-radius: 3%;
+    box-shadow: 0 0 20px rgb(0, 221, 203);
+    background-color:rgba(5, 128, 128, 0.671);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    
+}
+.ima{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -70px;
+    left: calc(50% - 70px);
+    
+}
+h1, h2{
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+}
+.formulario p{
+   
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    margin: 3%;
+}
+.formulario input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.formulario input[type="text"], input[type="password"]
+{
+    
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 25px;
+    color: #fff;
+    font-size: 16px;
+
+}
+.chek
+{
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 150px;
+    background: #04176d;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 15px;
+    margin: 20px 75px 20px 0px;
+}
+.chek:hover
+{
+    cursor: pointer;
+    background:#08b3ddde;
+    color: #000;
 }
 
+.formulario a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+.formulario a:hover
+{
+    color: #39dc79;
+}
 
