@@ -86,4 +86,24 @@ public class ProveedoresDAO {
 				
 				
 			}
+			//Eliminar
+			public boolean eliminar(ProveedoresDTO proveedor) {
+				// clien es un metodo que me permite traer los datos del DTO
+				int registro;
+				boolean dato = false;
+
+				try {
+					ps= cnn.prepareStatement("DELETE FROM proveedores WHERE Nit_proveedor=?");			
+					ps.setLong(1, proveedor.getNit_proveedor());
+					registro = ps.executeUpdate();				
+					
+					if (registro > 0) {
+						dato = true;
+					}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				return dato;
+			}
 }

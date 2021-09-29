@@ -86,7 +86,7 @@ public class ClientesDAO {
 		return clientesdto;
 		
 	}
-	
+	//Eliminar
 	public boolean eliminar(ClientesDTO clien) {
 		// clien es un metodo que me permite traer los datos del DTO
 		int registro;
