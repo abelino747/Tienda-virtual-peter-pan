@@ -33,7 +33,7 @@
 	                    <input type="text" name="usuario" placeholder="Usario">
 	                    <p>Contraseña</p>
 	                    <input type="password" name="password" placeholder="contraseña">
-	                    <button class="chek" type="checkbox" >Iniciar Sesión </button>
+	                    <button class="chek" type="button" >Iniciar Sesión </button>
 	                    <a href="#">Recuperar Contraseña</a>
 	                </form>  
 	            </div>

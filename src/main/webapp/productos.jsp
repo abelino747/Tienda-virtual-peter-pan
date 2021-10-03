@@ -7,7 +7,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> productos </h1>
+	<%	
+	// las variables que viajan por el servlet se colocan en nuevas variables que se muestran
+	// en el input o donde se quieran mostrar como una tabla aparte con value
+		String cedula= request.getParameter("ced");
+		String nombre=request.getParameter("nom");
+		String email=request.getParameter("e");
+		String usuario=request.getParameter("us");
+		String contra=request.getParameter("pas");		
+	
+	%>
+
+		<form action="ServletProductos" method="POST">
+		<!-- LE QUITE EL VALUEEE CUIDADOOOO QUEDAN ADVERTIDOS  -->  
+		<input type="text" name="ced" placeholder="Productos">
+		
+		<button type="Button" name="btnus">Cargar</button>
+		<button type="Button" name="btncon">Examinar</button>
+
+		</form>
+
 
 </body>
 </html>
