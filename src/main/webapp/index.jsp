@@ -32,8 +32,8 @@
 	                    <p>Usuario</p>
 	                    <input type="text" name="usuario" placeholder="Usario">
 	                    <p>Contraseña</p>
-	                    <input  type="password" name="password" placeholder="contraseña">
-	                    <button type="submit" class="chek" type="button" >Iniciar Sesión </button>
+	                    <input type="password" name="password" placeholder="contraseña">
+	                    <button class="chek" type="submit" >Iniciar Sesión </button>
 	                    <a href="#">Recuperar Contraseña</a>
 	                </form>  
 	            </div>
