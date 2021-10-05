@@ -9,6 +9,8 @@
 }
 body{
 background-image: url("../imagenes/tea-time-4825281_1920.png") ;
+max-width: 70%;
+
 }
 
 main{
@@ -58,7 +60,7 @@ h3{
 .contenedor .opcion{
     display: inline-block;
     position: relative;
-    width: 200px;
+    width: 180px;
     height: 130px;
     background-color: rgba(28, 151, 104, 0.836);
     margin: 10px 5px;
