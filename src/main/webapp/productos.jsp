@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagenes/Favicon Peter Pan.ico">
     <link rel="stylesheet" href="css/EstilosMenu.css">
-	<title>Productos</title>
+	<title>Carga de Productos</title>
 </head>
 <body>
 	<%	
