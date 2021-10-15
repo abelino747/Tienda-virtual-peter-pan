@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="ISO-8859-1">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +29,7 @@
 		<h1>Panaderia Peter Pan</h1>
 		<img class="img" src="imagenes/PeterPan Transparente.png" alt="logo"
 			height="150px">
-		<h3>El Rincón del Sabor</h3>
+		<h3>El RincÃ³n del Sabor</h3>
 	</header>
 	<main>
 		<h3>Menu</h3>
@@ -91,9 +92,9 @@
 
 			<form action="ServletProductos" method="POST" enctype="multipart/form-data">
 
-				<p>Código del Producto :</p>
+				<p>CÃ³digo del Producto :</p>
 				<input type="number" name="cod" value="<%=codigo_producto != null ? codigo_producto: ""%>"
-					 placeholder="Código">
+					 placeholder="CÃ³digo">
 				<p>Nombre del Producto:</p>
 				<input type="text" name="nom" value="<%=nombre_producto != null ? nombre_producto: ""%>"
 					placeholder="Nombre">
