@@ -15,8 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import javax.swing.JOptionPane;
 
-import modelo.ClientesDAO;
-import modelo.ClientesDTO;
+
 import modelo.ProductosDAO;
 import modelo.ProductosDTO;
 
@@ -90,8 +89,10 @@ public class ServletProductos extends HttpServlet {
 				x=prodao.cargarProductos(Url+"productos.csv");
 				if (x) {
 					JOptionPane.showMessageDialog(null,"Datos cargados en la base de datos TG");
+					response.sendRedirect("productos.jsp");
 				} else {
 					JOptionPane.showMessageDialog(null,"Error No Se Cargo Ningun Dato");
+					response.sendRedirect("productos.jsp");
 				} 
 				
 			} catch (Exception e) {
@@ -105,7 +106,7 @@ public class ServletProductos extends HttpServlet {
 		
 		// Consulta de Productos
 		if (request.getParameter("btncon")!=null) {
-			
+			JOptionPane.showMessageDialog(null,"Producto Consultado");
 			 codigo_producto = Long.parseLong(request.getParameter("cod"));
 			 prodDTO = new ProductosDTO(codigo_producto);
 			 prodDAO = new ProductosDAO();
@@ -128,7 +129,7 @@ public class ServletProductos extends HttpServlet {
 
 		}
 		
-		// Actualización de Productos
+		// Actualizar  Productos
 		if (request.getParameter("btnact")!=null) {		
 
 			 codigo_producto = Long.parseLong(request.getParameter("cod"));

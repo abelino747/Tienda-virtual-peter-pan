@@ -17,8 +17,10 @@ public class UsuariosDAO {
 		boolean dato=false;
 		//System.out.println(usu.getCedula_usuario());
 		//System.out.println(usu.getNombre_usuario());
+		
+		// en mariadb si se distinge entre mayusculas y minusculas al llamar las tablas 
 		try {
-			ps= cnn.prepareStatement("INSERT INTO Usuarios Values(?,?,?,?,?)");
+			ps= cnn.prepareStatement("INSERT INTO usuarios Values(?,?,?,?,?)");
 			ps.setLong(1, usu.getCedula_usuario());
 			ps.setString(2, usu.getNombre_usuario());
 			ps.setString(3, usu.getEmail_usuario());

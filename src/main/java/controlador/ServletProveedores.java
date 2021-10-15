@@ -82,7 +82,7 @@ public class ServletProveedores extends HttpServlet {
 		// Consulta de Proveedores
 
 		if (request.getParameter("btnprove") != null) {
-		
+			JOptionPane.showMessageDialog(null, "Proveedor Encontrado ...");	
 
 			nit_proveedor = Long.parseLong(request.getParameter("nit1"));
 
@@ -101,6 +101,7 @@ public class ServletProveedores extends HttpServlet {
 			response.sendRedirect("proveedores.jsp?nit1=" + nit_proveedor + "&&nombre1=" + nombre_proveedor
 					+ "&&ciudad1=" + ciudad_proveedor + "&&direccion1=" + direccion_proveedor + "&&telefono1="
 					+ telefono_proveedor);
+			
 
 		}
 		// actualizacion de proveedores

@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagenes/Favicon Peter Pan.ico">
+    <link rel="shortcut icon" href="Favicon Peter Pan.ico">
     <link rel="stylesheet" href="css/EstilosMenu.css">
 
 
@@ -35,11 +35,12 @@
         <h3>Menu</h3>
 
         <nav class="contenedor">
+           
            <div class="opcion">
            <h2>Inicio</h2>
            <a href="menu.jsp">
                 
-                    <img src="imagenes/house-1110868_1280.png" alt="Reportes">   
+                    <img src="imagenes/house-1110868_1280.png" alt="Reportes">               
             </a>
             </div>
             <div class="opcion">
@@ -96,16 +97,16 @@
     <nav   class="usuarios" >
         <div id="formulario" class="formulario">
 		<form action="ServletUsuario" method="POST">
-		<p>Cedula :</p>
-		<input type="text" name="ced" value="<%=cedula%>" required placeholder="Cedula">
-		<p>Nombre :</p>
-		<input type="text" name="nom" value="<%=nombre%>" required placeholder="Nombre">
-		<p>Correo :</p>
-		<input type="text" name="e"   value="<%=email%>" required placeholder="E-mail">
-		<p>Usuario :</p>
-		<input type="text" name="us"  value="<%=usuario%>" required placeholder="Usuario">
-		<p>Password:</p>
-		<input type="text" name="pas" value="<%=contra%>" placeholder="Password">
+		<p>Cedula Usuario:</p>
+		<input type="number" name="ced" value="<%=cedula  != null ? cedula: "" %>" required placeholder="Cedula">
+		<p>Nombre Usuario:</p>
+		<input type="text" name="nom" value="<%=nombre  != null ? nombre: "" %>"  placeholder="Nombre">
+		<p>Correo Usuario:</p>
+		<input type="email" name="e"   value="<%=email   != null ? email: ""  %>" placeholder="E-mail">
+		<p> Nickname Usuario :</p>
+		<input type="text" name="us"  value="<%=usuario != null ? usuario: ""%>" placeholder="Usuario">
+		<p>Password Usuario:</p>
+		<input type="password" name="pas" value="<%=contra  != null ? cedula: "" %>" placeholder="Password">
 		<button type="submit" name="btnus" class="chek"  id="chek">Registro </button>		
 		<button type="submit" name="btncon" class="chek" id="chek">Consultar</button>
 		<button type="submit" name="btnact" class="chek" id="chek">Actualizar</button>

@@ -9,14 +9,13 @@
 
 body{
     background-image: url("../imagenes/tea-time-4825281_1920.png");
-    width: 100%;
     background-size:cover;
     height:100vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .formulario{
     width: 460px;
-    height: 55%;
+    height: 60%;
     border-radius: 3%;
     box-shadow: 0 0 20px rgb(0, 221, 203);
     background-color:rgba(5, 128, 128, 0.671);
