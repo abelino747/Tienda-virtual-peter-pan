@@ -6,10 +6,13 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
+
 }
 body{
-background-image: url("../imagenes/tea-time-4825281_1920.png") ;
-max-width: 70%;
+    background-image: url("../imagenes/tea-time-4825281_1920.png");
+    background-size:cover;
+    height:100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 
@@ -23,7 +26,7 @@ main{
      
 }
 h1{
-    margin-left: 42%;
+    margin-left: 45%;
     color:black;
     margin-top: 20px;
 }
@@ -32,22 +35,22 @@ h1{
     font-size: 2em;
 }
 h3{
-    margin-left: 42%;
+    margin-left: 47%;
     text-align: center;
     border-radius: 10px;
     background-color: rgba(236, 245, 245, 0.8);
     color:rgba(2, 0, 8, 0.781);
-    margin-top: 10px;
     width: 15%;
     font-size: 1.5em;
 }
 .img{
-    margin-left: 45%;
+    margin-left:51%;
+    height:90px;
     background-color:  rgba(238, 238, 238, 1);
     box-shadow: 10px 10px 0px 0px #531064ad;
-    border-radius: 100%;
-    position: relative;
-    top: 5px;
+    border-radius:100%;
+    position: absolute;
+    top: 13%;
 }
 
 .contenedor {
@@ -77,6 +80,7 @@ h3{
 }
 .opcion img{
     width: 40%;
+  
     
 }
 .opcion h2{
@@ -86,31 +90,29 @@ h3{
 /* formulario de registro usuarios */
 
 .formulario{
-    width: 600px;
-    height: 450px;
+    width: 40%;
+    height: 400px;
     border-radius: 3%;
     box-shadow: 0 0 15px rgb(9, 30, 150);
     background-color: rgba(5, 128, 128, 0.671);
     color: #fff;
-    top: 62%;
-    left: 50%;
+    top: 55%;
+    left: 55%;
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 30px 30px;  
 }
 .formulario p{
+	width:40%;
     font-size: 1.4em;
-    margin: 0;
-    padding: 5px;
+
     font-weight: bold;
     display: inline-block;
 
 }
 .formulario input{
-    width: 75%;
-    padding: auto;
-    margin-left: auto;
+    width: 50%;
     margin-bottom: 20px;   
     background: transparent; 
     border: none;
@@ -129,7 +131,7 @@ h3{
     color: #fff;
     font-size: 1.5em;
     border-radius: 15px;
-    margin: 10% 0% ;
+    margin: 5% 0% ;
 
 }
 .chek:hover{
@@ -138,6 +140,31 @@ h3{
     color: #000;
 }
 
-
+.formulario .carga{
+	top:101%;
+	left:-2px;
+	height:110px;
+	width:100%;
+	position: absolute;
+	box-shadow: 0 0 15px rgb(9, 30, 150);
+    background-color: rgba(5, 128, 128, 0.671);
+    border-radius: 4%;
+}
+.formulario .carga .cheko{
+		margin:2% 5%;
+		display:block;
+	    height: 35px;
+	    width: 90%;	    
+	    background:  #031c8f;
+	    color: #fff;
+	    font-size: 1.5em;
+	    border-radius: 15px;
+	
+}
+.formulario .carga .cheko:hover{
+    cursor: pointer;
+    background: #08b3ddde;
+    color: #000;
+}
 
 

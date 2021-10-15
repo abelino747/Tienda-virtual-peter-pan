@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagenes/Favicon Peter Pan.ico">
+    <link rel="shortcut icon" href="Favicon Peter Pan.ico">
     <link rel="stylesheet" href="css/EstilosMenu.css">
 <title>Proveedores</title>
 </head>
@@ -26,9 +26,11 @@
         <h1>Panaderia Peter Pan</h1>
         <img class="img" src="imagenes/PeterPan Transparente.png" alt="logo" height="150px">
         <h3>El Rincón del Sabor</h3>
+        
     </header>
     
     <main>
+    
         <h3>Menu</h3>
 
         <nav class="contenedor">
@@ -92,18 +94,20 @@
     </main>
     
        <nav   class="usuarios" >
+       
         <div id="formulario" class="formulario">
+        
 		<form action="ServletProveedores" method="POST">
-		<p>NIT :</p>
-		<input type="text" name="nit1" value="<%=nit%>" placeholder="nit_proveedor">
-		<p>Nombre :</p>
-		<input type="text" name="nombre1" value="<%=nombre%>" placeholder="nombre_proveedor">
-		<p>Ciudad :</p>
-		<input type="text" name="ciudad1"   value="<%=ciudad%>"  placeholder="ciudad_proveedor">
-		<p>Dirección :</p>
-		<input type="text" name="direccion1"  value="<%=direccion%>"placeholder="direccion_proveedor">
-		<p>Teléfono :</p>
-		<input type="text" name="telefono1" value="<%=telefono%>" placeholder="telefono_proveedor">
+		<p>NIT Proveedor:</p>
+		<input type="number" name="nit1" value="<%=nit != null ? nit: ""%>" required placeholder="nit_proveedor">
+		<p>Nombre Proveedor:</p>
+		<input type="text" name="nombre1" value="<%=nombre != null ? nombre: ""%>" placeholder="nombre_proveedor">
+		<p>Ciudad Proveedor:</p>
+		<input type="text" name="ciudad1"   value="<%=ciudad != null ? ciudad: ""%>"  placeholder="ciudad_proveedor">
+		<p>Dirección Proveedor:</p>
+		<input type="text" name="direccion1"  value="<%=direccion != null ? direccion: ""%>"placeholder="direccion_proveedor">
+		<p>Teléfono Proveedor:</p>
+		<input type="number" name="telefono1" value="<%=telefono != null ? telefono: ""%>" placeholder="telefono_proveedor">
 
 		<button type="submit" name="btnProveedor" class="chek" id="chek">Registrar</button>
 		<button type="submit" name="btnprove" class="chek" id="chek">Consultar</button>

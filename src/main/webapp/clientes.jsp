@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagenes/Favicon Peter Pan.ico">
+    <link rel="shortcut icon" href="Favicon Peter Pan.ico">
     <link rel="stylesheet" href="css/EstilosMenu.css">
 
 
@@ -100,16 +100,16 @@
         <div id="formulario" class="formulario">
 
 		<form action="ServletClientes" method="POST">
-		<p>Cedula :</p>
-		<input type="text" name="ced" value="<%=cedula%>"    placeholder="Cedula">
-		<p>Nombre :</p>
-		<input type="text" name="nom" value="<%=nombre%>"    placeholder="Nombre">
-		<p>Dirección :</p>
-		<input type="text" name="dir" value="<%=direccion%>" placeholder="Dirección">
-		<p>Correo :</p>
-		<input type="text" name="ema" value="<%=email%>"     placeholder="E-mail">
-		<p>Teléfono :</p>
-		<input type="text" name="tel" value="<%=telefono%>"  placeholder="Teléfono">
+		<p>Cedula Cliente :</p>
+		<input type="number" name="ced" value="<%=cedula != null ? cedula: ""%>" required placeholder="Cedula">
+		<p>Nombre Cliente:</p>
+		<input type="text" name="nom" value="<%=nombre != null ? nombre: ""%>"    placeholder="Nombre">
+		<p>Dirección Cliente :</p>
+		<input type="text" name="dir" value="<%=direccion != null ? direccion: ""%>" placeholder="Dirección">
+		<p>Correo Cliente:</p>
+		<input type="email" name="ema" value="<%=email != null ? email: ""%>"     placeholder="E-mail">
+		<p>Teléfono Cliente:</p>
+		<input type="number" name="tel" value="<%=telefono != null ? telefono: ""%>"  placeholder="Teléfono">
 
 		<button type="submit" name="btncli" class="chek" id="chek">Registrar</button>
 		<button type="submit" name="btncon" class="chek" id="chek">Consultar</button>
