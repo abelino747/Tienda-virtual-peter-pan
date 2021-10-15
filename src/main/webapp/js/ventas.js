@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 
 	$('.cantidad').on('keyup',function(){
-	alert("alerta ");
+	//alert("alerta ");
 	let cat=$('.cantidad').val();
 	let pre=$('#pre').val();
 	let iva=$('#iva').val();
@@ -15,7 +15,7 @@ $(document).ready(function(){
 	
 	
 	$('.cantidad2').on('keyup',function(){
-	alert("alerta ");
+	//alert("alerta ");
 	let cat=$('.cantidad2').val();
 	let pre=$('#pre2').val();
 	let iva=$('#iva2').val();
@@ -27,7 +27,7 @@ $(document).ready(function(){
 	});	
 	
 	$('.cantidad3').on('keyup',function(){
-	alert("alerta ");
+	//alert("alerta ");
 	let cat=$('.cantidad3').val();
 	let pre=$('#pre3').val();
 	let iva=$('#iva3').val();

@@ -14,9 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="Favicon Peter Pan.ico">
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="js/consultar.js"></script>
-
-
+<script type="text/javascript" src="js/ventas.js"></script>
+<link rel="stylesheet" href="css/EstilosMenu.css">
 
 <title>Ventas</title>
 </head>
@@ -33,7 +32,7 @@
 
 			<input type="text" name="cedula" value="${cliente.getCedula_cliente()}" placeholder="cedula">
 			<input type="text" name="nombre" value="${cliente.getNombre_cliente()}" placeholder="nombre">
-			<input type="submit" name="confirmar">
+			<input type="submit" name="confirmar"class="chek" >
 
 			<table>
 
@@ -81,7 +80,7 @@
 
 			</table>
 			
-			<input type="text" name="cu" value="544567"  >
+			<input type="text" name="cu" value="${vs.getCedula_usuario()}"  >
 			
 		</form>
 

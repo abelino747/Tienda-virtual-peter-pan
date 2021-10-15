@@ -18,11 +18,11 @@ public class Conexion {
 			Class.forName("org.mariadb.jdbc.Driver");
 			try {
 				//con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "Drluky0311.");
-				//con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "toor");
+				con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "root");
 				
 				
 												
-				con=DriverManager.getConnection("jdbc:mariadb://tiendagenericagrupo43-10-32.czo3ixoe3xoe.us-east-1.rds.amazonaws.com/peter_pan", "admin", "123456789");				
+				//con=DriverManager.getConnection("jdbc:mariadb://tiendagenericagrupo43-10-32.czo3ixoe3xoe.us-east-1.rds.amazonaws.com/peter_pan", "admin", "123456789");				
 				
 				
 				

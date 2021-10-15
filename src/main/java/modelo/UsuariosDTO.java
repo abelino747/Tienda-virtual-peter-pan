@@ -18,6 +18,12 @@ public class UsuariosDTO {
 		this.password = password;
 	}
 	
+	public UsuariosDTO(String usuario, String password) {
+		super();
+		this.usuario = usuario;
+		this.password = password;
+	}
+
 	// constructor para generar consulta por la cedula
 	public UsuariosDTO(long cedula_usuario) {
 		super();

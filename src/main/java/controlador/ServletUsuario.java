@@ -1,12 +1,17 @@
 package controlador;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
+
+import com.google.gson.Gson;
 
 import modelo.UsuariosDAO;
 import modelo.UsuariosDTO;
@@ -135,6 +140,18 @@ public class ServletUsuario extends HttpServlet {
 				
 			}
 			response.sendRedirect("Usuarios.jsp");
+		}
+		
+		//consulta general
+		if(request.getParameter("repUsuarios") != null) {
+			ArrayList<UsuariosDTO> lista=new ArrayList<>();
+			usudao=new UsuariosDAO();
+			lista= usudao.consultageneral();		
+			Gson general=new Gson();
+			// metodo para enviar datos al js javax
+			PrintWriter out= response.getWriter();			
+			out.print(general.toJson(lista));
+			
 		}
 		
 			

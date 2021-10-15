@@ -13,6 +13,19 @@
 	<title>Reportes</title>
 </head>
 <body>
-	<h1>Reportes en construccion </h1> 
+<main>
+		<header id="contenedortitulo" class="headerclass">
+			<h1>Modulo de Reportes</h1>
+		</header>
+		<form action="ServletUsuario" method="post">
+			<input type="submit" name="repUsuarios" value="Reporte Usuarios">
+			<input type="submit" name="repClientes" value="Reporte Clientes">
+			<input type="submit" name="repVentas" value="Reporte Ventas por cliente">	
+			
+			<table id = "datos_en_tabla"></table>		
+		</form>
+
+	</main>
+
 </body>
 </html>
