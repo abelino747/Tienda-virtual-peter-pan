@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	
 
-	$('.cantidad').on('keyup',function(){
+	$('#cantidad').on('keyup',function(){
 	//alert("alerta ");
-	let cat=$('.cantidad').val();
+	let cat=$('#cantidad').val();
 	let pre=$('#pre').val();
 	let iva=$('#iva').val();
 	let datos=document.querySelector('#pret');
@@ -12,11 +12,11 @@ $(document).ready(function(){
 		
 		
 	});
-	
-	
-	$('.cantidad2').on('keyup',function(){
+	//. es clase # es id 
+
+	$('#cantidad2').on('keyup',function(){
 	//alert("alerta ");
-	let cat=$('.cantidad2').val();
+	let cat=$('#cantidad2').val();
 	let pre=$('#pre2').val();
 	let iva=$('#iva2').val();
 	let datos=document.querySelector('#pret2');
@@ -26,9 +26,9 @@ $(document).ready(function(){
 		
 	});	
 	
-	$('.cantidad3').on('keyup',function(){
+	$('#cantidad3').on('keyup',function(){
 	//alert("alerta ");
-	let cat=$('.cantidad3').val();
+	let cat=$('#cantidad3').val();
 	let pre=$('#pre3').val();
 	let iva=$('#iva3').val();
 	let datos=document.querySelector('#pret3');

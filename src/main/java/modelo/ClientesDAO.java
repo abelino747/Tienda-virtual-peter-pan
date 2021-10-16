@@ -1,6 +1,8 @@
 package modelo;
 
 import java.sql.*;
+import java.util.ArrayList;
+
 import controlador.Conexion;
 
 // data access object
@@ -106,5 +108,26 @@ public class ClientesDAO {
 		}
 		return dato;
 	}
+	
+	// consulta general de todos los datos usando js
+		public ArrayList<ClientesDTO> consultageneral1() {
+
+			ArrayList<ClientesDTO> lista1 = new ArrayList<ClientesDTO>();
+			try {
+				ps = cnn.prepareStatement("SELECT * FROM usuarios");
+				rs = ps.executeQuery();
+				while (rs.next()) {
+					
+					clientesdto=new ClientesDTO(rs.getLong(1),rs.getString(2),rs.getString(3),
+			                   rs.getString(4),rs.getString(5));
+
+					lista1.add(clientesdto);
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			return lista1;
+		}
+	
 
 }

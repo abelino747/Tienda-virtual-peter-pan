@@ -43,7 +43,8 @@ public class ServletUsuario extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		// metodo para  imprimir en pantalla al enviar datos al js javax
+		PrintWriter out= response.getWriter();	
 		// Registro de Usuarios
 		boolean certifica;
 		 long cedula_usuario;
@@ -142,17 +143,18 @@ public class ServletUsuario extends HttpServlet {
 			response.sendRedirect("Usuarios.jsp");
 		}
 		
-		//consulta general
-		if(request.getParameter("repUsuarios") != null) {
-			ArrayList<UsuariosDTO> lista=new ArrayList<>();
-			usudao=new UsuariosDAO();
-			lista= usudao.consultageneral();		
-			Gson general=new Gson();
-			// metodo para enviar datos al js javax
-			PrintWriter out= response.getWriter();			
-			out.print(general.toJson(lista));
-			
-		}
+		
+		
+		//consulta general por fuera del if ya que se utilia js
+		ArrayList<UsuariosDTO> lista=new ArrayList<>();
+		usudao=new UsuariosDAO();
+		lista= usudao.consultageneral();	
+		// gson comunica entre lenguajes en este caso java y js 
+		Gson general=new Gson();
+		// out imprime en pantalla la lista
+		out.print(general.toJson(lista));
+
 		
 			
-	}}
+	}
+	}

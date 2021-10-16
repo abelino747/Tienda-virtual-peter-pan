@@ -1,0 +1,101 @@
+@charset "ISO-8859-1";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-image: url("../imagenes/tea-time-4825281_1920.png");
+    background-size:cover;
+    height:100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+	margin-left:25%;
+	width: 50%;
+	background: rgba(5, 128, 128, 0.671);
+	text-align: center;
+	border-radius: 15px;
+	margin-top: 25px;
+	color: white;
+
+	
+}
+.formulario{
+    width: 80%;
+    height: 70%;
+    border-radius: 3%;
+    box-shadow: 0 0 20px rgb(0, 221, 203);
+    background-color:rgba(5, 128, 128, 0.671);
+    color: #fff;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+   
+}
+
+.ca .c{
+	width:250px;
+	height: 30px;
+	border-radius: 15px;
+	margin-bottom: 50px;
+	padding-left: 15px;
+}
+.ca .chek{
+	
+	border: none;
+    outline: none;
+    height: 35px;
+    width: 150px;
+    background: #031c8f;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 15px;
+
+	
+	}
+	
+.chek{
+	
+	border: none;
+    outline: none;
+    height: 35px;
+    width: 150px;
+    background: #031c8f;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 15px;
+    top:-100px;
+   
+	}
+.c{
+	width:250px;
+	height: 30px;
+	border-radius: 15px;
+	margin-bottom: 50px;
+	padding-left: 25px;
+	background-color:white;
+}
+.co{
+	width:110px;
+	height: 30px;
+	border-radius: 15px;
+	margin-bottom: 50px;
+	margin-left:15px;
+	padding-left: 15px;
+	background-color:white;
+}
+th{
+
+	margin:15px;
+	font-size:1.2em;
+	background: rgba(5, 128, 128, 1.671);
+	border-radius: 15px;
+}
+
