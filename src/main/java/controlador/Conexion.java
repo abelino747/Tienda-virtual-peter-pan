@@ -18,7 +18,7 @@ public class Conexion {
 			Class.forName("org.mariadb.jdbc.Driver");
 			try {
 				//con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "Drluky0311.");
-				con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "toor");
+				con=DriverManager.getConnection("jdbc:mysql://localhost/TG", "root", "root");
 				
 				
 												

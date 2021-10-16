@@ -7,6 +7,7 @@ public class ClientesDTO {
 	private String direccion_cliente;
 	private String email_cliente;
 	private String telefono_cliente;
+	private long total_ventas;
 	
 	 public ClientesDTO(long cedula_cliente, String nombre_cliente, String direccion_cliente, String email_cliente,
 			String telefono_cliente) {
@@ -18,7 +19,22 @@ public class ClientesDTO {
 		this.telefono_cliente = telefono_cliente;
 	}
 
-	 // constructor para consultar los clientes desde la cedula
+	 public long getTotal_ventas() {
+		return total_ventas;
+	}
+
+	public void setTotal_ventas(long total_ventas) {
+		this.total_ventas = total_ventas;
+	}
+
+	public ClientesDTO(long cedula_cliente, String nombre_cliente, long total_ventas) {
+		super();
+		this.cedula_cliente = cedula_cliente;
+		this.nombre_cliente = nombre_cliente;
+		this.total_ventas = total_ventas;
+	}
+
+	// constructor para consultar los clientes desde la cedula
 	public ClientesDTO(long cedula_cliente) {
 		
 		this.cedula_cliente = cedula_cliente;

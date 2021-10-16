@@ -110,11 +110,11 @@ public class ClientesDAO {
 	}
 	
 	// consulta general de todos los datos usando js
-		public ArrayList<ClientesDTO> consultageneral1() {
+		public ArrayList<ClientesDTO> consultageneral() {
 
 			ArrayList<ClientesDTO> lista1 = new ArrayList<ClientesDTO>();
 			try {
-				ps = cnn.prepareStatement("SELECT * FROM usuarios");
+				ps = cnn.prepareStatement("SELECT * FROM clientes");
 				rs = ps.executeQuery();
 				while (rs.next()) {
 					
@@ -129,5 +129,24 @@ public class ClientesDAO {
 			return lista1;
 		}
 	
+		// consulta general de todos los datos usando js
+		public ArrayList<ClientesDTO> consultaVentasCliente() {
+
+			ArrayList<ClientesDTO> lista1 = new ArrayList<ClientesDTO>();
+			try {
+				ps = cnn.prepareStatement("select c.cedula_cliente, c.nombre_cliente, sum(v.total_venta) total_venta "
+						+ " from clientes as c inner join ventas as v using (cedula_Cliente)");
+				rs = ps.executeQuery();
+				while (rs.next()) {
+					
+					clientesdto=new ClientesDTO(rs.getLong(1),rs.getString(2),rs.getLong(3));
+
+					lista1.add(clientesdto);
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			return lista1;
+		}
 
 }

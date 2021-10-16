@@ -143,8 +143,6 @@ public class ServletUsuario extends HttpServlet {
 			response.sendRedirect("Usuarios.jsp");
 		}
 		
-		
-		
 		//consulta general por fuera del if ya que se utilia js
 		ArrayList<UsuariosDTO> lista=new ArrayList<>();
 		usudao=new UsuariosDAO();

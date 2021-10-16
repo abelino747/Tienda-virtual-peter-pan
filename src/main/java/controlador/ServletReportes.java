@@ -39,8 +39,19 @@ public class ServletReportes extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter out = response.getWriter();
+
+		ClientesDAO clidao;
+
+		// consulta general por fuera del if ya que se utilia js
+		ArrayList<ClientesDTO> lista = new ArrayList<>();
+		clidao = new ClientesDAO();
+		lista = clidao.consultaVentasCliente();
+		// gson comunica entre lenguajes en este caso java y js
+		Gson general = new Gson();
+		// out imprime en pantalla la lista
+		out.print(general.toJson(lista));
+
 	}
 
 	/**
@@ -49,6 +60,19 @@ public class ServletReportes extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// metodo para imprimir en pantalla al enviar datos al js javax
+		PrintWriter out = response.getWriter();
+
+		ClientesDAO clidao;
+
+		// consulta general por fuera del if ya que se utilia js
+		ArrayList<ClientesDTO> lista = new ArrayList<>();
+		clidao = new ClientesDAO();
+		lista = clidao.consultageneral();
+		// gson comunica entre lenguajes en este caso java y js
+		Gson general = new Gson();
+		// out imprime en pantalla la lista
+		out.print(general.toJson(lista));
 
 	}
 

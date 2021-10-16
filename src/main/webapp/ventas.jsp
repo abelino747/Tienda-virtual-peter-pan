@@ -15,7 +15,7 @@
 <link rel="shortcut icon" href="Favicon Peter Pan.ico">
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="js/ventas.js"></script>
-<link rel="stylesheet" href="css/reportes.css">
+<link rel="stylesheet" href="css/ventas.css">
 
 <title>Ventas</title>
 </head>
@@ -30,9 +30,9 @@
 		<form action="ServletVentas" method="post" >
 			<div class="ca">
 
-			<input  class="c" type="text" name="cedula" value="${cliente.getCedula_cliente()}" placeholder="cedula">
+			<input class="c" type="text" name="cedula" value="${cliente.getCedula_cliente()}" placeholder="cedula">
 			<input class="c" type="text" name="nombre" value="${cliente.getNombre_cliente()}" placeholder="nombre">
-			<input type="submit" name="confirmar"class="chek" >
+			<input type="submit" name="confirmar"class="chek" value="Buscar Cliente"  >
 			</div>
 			<table >
 
